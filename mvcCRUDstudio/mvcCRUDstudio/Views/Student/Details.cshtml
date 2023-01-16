@@ -1,0 +1,39 @@
+﻿@model mvcCRUDstudio.Models.Student
+@using mvcCRUDstudio;
+
+@{
+    ViewData["Title"] = "Details";
+    int id = (int)ViewBag.Id;
+    Student detail = DBManager.GetStudent(id);
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sid)
+        </dt>
+        <dd class = "col-sm-10">
+            @detail.Sid
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sname)
+        </dt>
+        <dd class = "col-sm-10">
+            @detail.Sname
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd class = "col-sm-10">
+            @detail.Course
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = detail.Sid }) |
+    <a asp-action="Index">Back to List</a>
+</div>
