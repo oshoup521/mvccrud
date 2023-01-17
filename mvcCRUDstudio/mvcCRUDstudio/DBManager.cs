@@ -170,7 +170,7 @@ namespace mvcCRUDstudio
             con.ConnectionString = conString;
             try
             {
-                string query = "UPDATE student SET snmae='" + student.Sname + "', course='" + student.Course + "' WHERE sid=" + student.Sid;
+                string query = "UPDATE student SET sname='" + student.Sname + "', course='" + student.Course + "' WHERE sid=" + student.Sid;
                 MySqlCommand command = new MySqlCommand(query, con);
                 con.Open();
                 command.ExecuteNonQuery();

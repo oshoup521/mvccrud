@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "84F490j3VWhyLBiEDnnrijYEZ61t+4Ur02b+PDzAmgc4S59hk7e6PofjSRbpMZqw8hec5NTldRzC91sKJrtZQg==",
+  "dgSpecHash": "6CqdE7BUFN8lRFt/tsR7OCuvJRS26eAcLZHm++KpkblVIPcJnAR+mt/Hejpl2FSt2QFjA0/k1n37xn9trriaKQ==",
   "success": true,
-  "projectFilePath": "D:\\local repository\\dotnetmvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\mvcCRUDstudio.csproj",
+  "projectFilePath": "D:\\local repository\\mvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\mvcCRUDstudio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oshou\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\oshou\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

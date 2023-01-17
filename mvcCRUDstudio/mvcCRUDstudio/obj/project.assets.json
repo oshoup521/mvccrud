@@ -9300,11 +9300,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\local repository\\dotnetmvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\mvcCRUDstudio.csproj",
+      "projectUniqueName": "D:\\local repository\\mvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\mvcCRUDstudio.csproj",
       "projectName": "mvcCRUDstudio",
-      "projectPath": "D:\\local repository\\dotnetmvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\mvcCRUDstudio.csproj",
+      "projectPath": "D:\\local repository\\mvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\mvcCRUDstudio.csproj",
       "packagesPath": "C:\\Users\\oshou\\.nuget\\packages\\",
-      "outputPath": "D:\\local repository\\dotnetmvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\obj\\",
+      "outputPath": "D:\\local repository\\mvccrud\\mvcCRUDstudio\\mvcCRUDstudio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oshou\\AppData\\Roaming\\NuGet\\NuGet.Config",

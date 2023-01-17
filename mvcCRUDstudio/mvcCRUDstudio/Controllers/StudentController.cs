@@ -52,14 +52,13 @@ namespace mvcCRUDstudio.Controllers
         }
 
         // POST: StudentController/Edit/5
-        [HttpPut]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, FormCollection form) 
+        public ActionResult Edit(Student updateStudent) 
         {
             try
             {
-                Student updateStudent = DBManager.GetStudent(id);
-                ViewData["id"] = id;
+                ViewBag.student = updateStudent;
                 DBManager.Update(updateStudent);
                 return RedirectToAction(nameof(Index));
             }
