@@ -1,4 +1,5 @@
-﻿@model IEnumerable<mvcCRUDstudio.Models.Student>
+﻿@model IEnumerable<Student>
+@using mvcCRUDstudio.BOL
 
 @{
     ViewData["Title"] = "Index";
@@ -40,8 +41,8 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Sid }) |
-                    @Html.ActionLink("Details", "Details", new {  id=item.Sid }) |
-                    @Html.ActionLink("Delete", "Delete", new {  id=item.Sid })
+                @Html.ActionLink("Details", "Details", new {  id=item.Sid }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.Sid })
             </td>
         </tr>
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using mvcCRUDstudio.Models;
+using mvcCRUDstudio.BOL;
+using mvcCRUDstudio.BLL;
 
 namespace mvcCRUDstudio.Controllers
 {
@@ -9,7 +10,7 @@ namespace mvcCRUDstudio.Controllers
         public ActionResult Index()
         {
             List<Student> students = new List<Student>();
-            students = DBManager.GetStudents();
+            students = StudentManager.GetStudents();
             ViewData["students"] = students;
             return View();
         }
@@ -35,7 +36,7 @@ namespace mvcCRUDstudio.Controllers
         {
             try
             {
-                DBManager.Insert(newStudent);
+                StudentManager.Insert(newStudent);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -59,7 +60,7 @@ namespace mvcCRUDstudio.Controllers
             try
             {
                 ViewBag.student = updateStudent;
-                DBManager.Update(updateStudent);
+                StudentManager.Update(updateStudent);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -72,70 +73,9 @@ namespace mvcCRUDstudio.Controllers
         public ActionResult Delete(int id)
         {
             ViewData["id"] = id;
-            DBManager.Delete(id);
+            StudentManager.Delete(id);
             return RedirectToAction(nameof(Index));
         }
         
     }
 }
-
-
-
-
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.AspNetCore.Cors;
-//using mvcCRUDstudio.Models;
-//using mvcCRUDstudio;
-
-//// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-//namespace TestADOnet.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class StudentController : ControllerBase
-//    {
-//        // GET: api/<ValuesController>
-//        [HttpGet]
-//        [EnableCors]
-//        public IEnumerable<Student> Get()
-//        {
-//            List<Student> students = new List<Student>();
-//            students = DBManager.GetStudents();
-//            return students;
-//        }
-
-//        // get api/<valuescontroller>/5
-//        [HttpGet("{id}")]
-//        [EnableCors]
-//        public Student get(int id)
-//        {
-//            Student student = new Student();
-//            student = DBManager.GetStudent(id);
-//            return student;
-//        }
-
-//        // post api/<valuescontroller>
-//        [HttpPost]
-//        public void post(Student newStudent)
-//        {
-//            DBManager.Insert(newStudent);
-//        }
-
-//        // put api/<valuescontroller>/5
-//        [HttpPut("{id}")]
-//        public void put(Student student)
-//        {
-//            DBManager.Update(student);
-//        }
-
-//        // delete api/<valuescontroller>/5
-//        [HttpDelete("{id}")]
-//        [EnableCors]
-//        public void delete(int id)
-//        {
-//            DBManager.Delete(id);
-//        }
-//    }
-//}
-

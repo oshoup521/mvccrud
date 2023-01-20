@@ -1,52 +1,12 @@
-﻿using mvcCRUDstudio.Models;
+﻿using mvcCRUDstudio.BOL;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace mvcCRUDstudio
+namespace mvcCRUDstudio.DAL
 {
     public static class DBManager
     {
         public static string conString = @"server=localhost;port=3306;user=root;password=welcome@123;database=osho";
-
-        //---------------disconnected------------------
-        //---------------------------------------------
-        //public static List<Student> GetStudents()
-        //{
-        //    List<Student> allStudents = new List<Student>();
-
-
-        //    try {
-        //        MySqlConnection conn = new MySqlConnection(conString);
-        //        string query = "SELECT * FROM student";
-        //        MySqlCommand mySqlCommand = new MySqlCommand(query,conn);
-        //        MySqlDataAdapter da = new MySqlDataAdapter();
-        //        da.SelectCommand= mySqlCommand;
-        //        DataSet ds = new DataSet();
-        //        da.Fill(ds);
-
-        //        DataTable dt = ds.Tables[0];
-        //        DataRowCollection rows = dt.Rows;
-
-        //        foreach (DataRow row in rows)
-        //        {
-        //            int sid = int.Parse(row["sid"].ToString());
-        //            string sname = row["sname"].ToString();
-        //            string course = row["course"].ToString();
-
-        //            Student student = new Student { 
-        //                                        Sid= sid,
-        //                                        Sname= sname,
-        //                                        Course= course
-        //            };
-        //            allStudents.Add(student);
-        //        }
-
-        //    } catch (Exception ex) { 
-        //        Console.WriteLine(ex.Message);
-        //    }
-
-        //    return allStudents;
-        //}
 
         public static List<Student> GetStudents()
         {
